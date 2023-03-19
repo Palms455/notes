@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: some-web
+spec:
+  containers:
+    - name: container-nginx
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
+    - name: container-hexlet
+      image: hexletcomponents/devops-example-app
+      ports:
+        - containerPort: 5000
