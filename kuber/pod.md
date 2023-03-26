@@ -44,8 +44,7 @@ kubectl port-forward hello 80:80
 ``` 
 
 ### Создание pod через файл
-```
-пример example.yaml
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -53,16 +52,21 @@ metadata:
 spec:
   containers:
     - name: container-nginx
-      image: nginx-latest
+      image: nginx:latest
       ports:
         - containerPort: 80
-	  
-Вызов команды:
 
-	kubectl apply -f example.yaml
-Удаление:
-	kubectl delete -f example.yaml
+    - name: container-hexlet
+      image: hexletcomponents/devops-example-app
+      ports:
+        - containerPort: 5000
 
 ```
 
+Применение файла:
+```cli
+kubectl apply -f example.yaml
+```
+
+Удаление: `kubectl delete -f example.yaml`
 
