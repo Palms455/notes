@@ -6,6 +6,7 @@
 [[#Выполнить команду внтури pod]]
 [[#Проброс из pod к внешнему порту]]
 [[#Создание pod через файл]]
+[[#Получение логов пода]]
 
 
 ### Получить список pod
@@ -69,4 +70,17 @@ kubectl apply -f example.yaml
 ```
 
 Удаление: `kubectl delete -f example.yaml`
+
+####  Получение логов пода
+```
+ kubectl logs kubia-manual
+ 
+ получение логов конкретного контейнера 
+  kubectl logs kubia-manual -c kubi
+```
+
+### Зайти в pod
+```bash
+kubectl -it exec <pod_name> -- <command like bash|env etc>
+```
 

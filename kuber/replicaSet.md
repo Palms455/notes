@@ -92,7 +92,8 @@ kubectl delete po my-replicaset-55qdj
 Проверяем результат, для этого выполним команду:  
   
 ```bash  
-kubectl get pod```  
+kubectl get pod
+```  
   
 Результат должен быть примерно следующим:  
   
